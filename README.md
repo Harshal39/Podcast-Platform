@@ -16,3 +16,12 @@
 4.Created __root variables__  which allows us to create variables for colors.
 
 ### Note:- __Font library__ used **Google Fonts**
+
+## Firebase Setup
+Firebase works as a Backend As A Service[BAAS]\
+There are various services provided by Firebase but here I am using Authemtication and Firestore Database.\
+To install Firebase CMD ```npm install firebase```\
+To initialise Firebase services visit  ```https://console.firebase.google.com/```
+
+__Firebase Documentation__:- ```https://firebase.google.com/docs?hl=en&authuser=0&_gl=1*aq0kuz*_ga*MTg5OTg3Mzg4Ni4xNzEzMjQxMzEz*_ga_CW55HF8NVT*MTcxMzI0ODc3OS4yLjEuMTcxMzI0OTAyMy41Ni4wLjA.```
+
