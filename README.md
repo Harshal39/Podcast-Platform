@@ -38,7 +38,7 @@ More information:- ```https://redux-toolkit.js.org/usage/usage-guide```
 
 
 ## React-Router-DOM Setup
-CMD:- ```npm install react-router-dom```
+CMD:- ```npm install react-router-dom```\
 It enables dynamic routing on Web App.\
 It facilitates component-based routing according to the needs of the app and platform.\
 More information:- ```https://reactrouter.com/en/main/start/tutorial```
