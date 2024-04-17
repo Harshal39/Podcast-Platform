@@ -25,3 +25,14 @@ To initialise Firebase services visit  ```https://console.firebase.google.com/``
 
 __Firebase Documentation__:- ```https://firebase.google.com/docs?hl=en&authuser=0&_gl=1*aq0kuz*_ga*MTg5OTg3Mzg4Ni4xNzEzMjQxMzEz*_ga_CW55HF8NVT*MTcxMzI0ODc3OS4yLjEuMTcxMzI0OTAyMy41Ni4wLjA.```
 
+## Redux Toolkit Setup
+CMD:- ```npm install react redux```\
+      ```npm install @reduxjs/toolkit```
+
+### Note:- You can check the dependencies in ```Package.json``` file.
+
+__Redux__ is a state management tool that allow to manage state, create global state and keeps the record of actions and state.\
+__Reducer__ a part in redux which deals with entire state, it contains file that contains data and actionables perform on state.\
+__Provider__ is used to provide all the data of redux throughout the App.\
+More information:- ```https://redux-toolkit.js.org/usage/usage-guide```
+
