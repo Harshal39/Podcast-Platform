@@ -36,3 +36,9 @@ __Reducer__ a part in redux which deals with entire state, it contains file that
 __Provider__ is used to provide all the data of redux throughout the App.\
 More information:- ```https://redux-toolkit.js.org/usage/usage-guide```
 
+
+## React-Router-DOM Setup
+CMD:- ```npm install react-router-dom```
+It enables dynamic routing on Web App.\
+It facilitates component-based routing according to the needs of the app and platform.\
+More information:- ```https://reactrouter.com/en/main/start/tutorial```
