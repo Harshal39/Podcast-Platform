@@ -53,3 +53,7 @@ In this site the state of navbar links changes whenever there is change in locat
 Along with this __Ternery Operators__ were used for conditional rendering.
 
 More information about useLocation Hook :- ```https://reactrouter.com/en/main/hooks/use-location```
+
+## SignUp Page
+Here componenets were organised in Common Components and SignUp components folders for better organisation of code and also for better reusabilty.\
+Input form was made to insert data by the user.
