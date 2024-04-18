@@ -42,3 +42,14 @@ CMD:- ```npm install react-router-dom```\
 It enables dynamic routing on Web App.\
 It facilitates component-based routing according to the needs of the app and platform.\
 More information:- ```https://reactrouter.com/en/main/start/tutorial```
+
+
+## Header Section
+Here we have actually started coding and making components.\
+Structuring the Header Section using __JSX__ and styling it via __CSS__.\
+__useLocation()__ hook was used, this hook returns the current location object.\
+This can be useful if you'd like to perform some side effect whenever the current location changes.\
+In this site the state of navbar links changes whenever there is change in location.\
+Along with this __Ternery Operators__ were used for conditional rendering.
+
+More information about useLocation Hook :- ```https://reactrouter.com/en/main/hooks/use-location```
