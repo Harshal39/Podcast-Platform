@@ -57,3 +57,21 @@ More information about useLocation Hook :- ```https://reactrouter.com/en/main/ho
 ## SignUp Page
 Here componenets were organised in Common Components and SignUp components folders for better organisation of code and also for better reusabilty.\
 Input form was made to insert data by the user.
+
+## User Authentication and Saving User Information
+For this Firebase was used as some of its features are __user authentication__ and __data storage__.\
+__Flow__ of the code is in __SignUp__ page.\
+1.Creating user's account\
+2.Saving user's data\
+3.Save data in redux, call the redux action\
+4.Navigate to profile page
+
+__Flow__ of the code in __Login__ page.\
+1.Creating user's account.\
+2.Save data in redux, call the redux action.\
+3.Navigate to profile page.
+
+Firebase functions like ```createUserWithEmailand Password```  ```signInWithEmailandPassword``` ```getDoc``` ```setDoc``` ```Doc``` were used to create and set account.\
+Redux functions like ```dispatch``` which is used to call actions from redux was used.\
+__Navigate__ accesses the React Router history object and navigates to the other routers using the push or replace methods was used to navigate to profile page after creating and saving data.
+
