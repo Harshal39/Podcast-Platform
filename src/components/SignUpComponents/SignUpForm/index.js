@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import InputComponent from '../../CommonComponents/Input';
 import Button from '../../CommonComponents/Button';
-import { auth, db, storage } from "../../../firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { auth, db } from "../../../firebase";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { setDoc, doc } from 'firebase/firestore';
 import { setUser } from "../../../slices/userSlice";
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function SignUpForm() {
 
@@ -14,13 +15,15 @@ function SignUpForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmpassword, setConfirmpassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
     
     const handleSignup = async ()=>{
       console.log("Handling Signup...");
-      if(password===confirmpassword && password.length>=6){
+      setLoading(true);
+      if(password===confirmpassword && password.length>=6 && fullName && email){
         try {
           //Creating User's Account
           const userCredential = await createUserWithEmailAndPassword(
@@ -47,13 +50,24 @@ function SignUpForm() {
           })
         );
 
+        toast.success("User has been created");
+        setLoading(false);
         navigate("/profile");
 
         }
          catch(e) {
           console.log("error",e);
+          toast.error(e.message);
+          setLoading(false);
         }
       }else{
+        if(password!== confirmpassword){
+          toast.error("Please make sure your password and confirm password matches!")
+        }
+        else if(password.length < 6){
+          toast.error("Please make sure your password is more than 6 digits long")
+        }
+        setLoading(false);
         //throw an error
       }
       
@@ -86,7 +100,10 @@ function SignUpForm() {
         placeholder="Confirm-Password" 
         type="password" required={true}/>
 
-        <Button text={"Signup"} onClick={handleSignup}/>
+        <Button 
+        text={loading ? "Loading":"Signup"}
+         disabled={loading} 
+         onClick={handleSignup}/>
     </>
   )
 }

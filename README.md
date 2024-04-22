@@ -75,3 +75,21 @@ Firebase functions like ```createUserWithEmailand Password```  ```signInWithEmai
 Redux functions like ```dispatch``` which is used to call actions from redux was used.\
 __Navigate__ accesses the React Router history object and navigates to the other routers using the push or replace methods was used to navigate to profile page after creating and saving data.
 
+## React Toastify and Error Handling
+__React Toastify__ is a free, popular, and MIT-licensed package that you can use to add toast notifications to your React application.\
+In this part we are focused on enhancing the user experience by implementing form validations and user feedback.\
+We'll use a simple NPM package called React Toast to show feedback messages or 'toasts'.\
+Additionally, we'll work on setting up protected routes and fetching user details upon site visit.
+
+To install Toastify dependency:-\
+CMD:- ```npm i react-toastify```\
+More information:- ```https://www.npmjs.com/package/react-toastify?activeTab=readme```
+
+__Applications__\
+Used Toasts for Feedback: Wrapped the entire application in the Toast Container. This enabled the use of toasts on all the different pages in the application.
+
+Implemented Form Validations: Performed checks on the signup form and the login form. For example, checked if the password matches the confirm password, if the password is more than six characters long, etc. Used __toast.error__ to show error messages when validations fail.
+
+Show Success Messages: Upon successful user creation or login, show a success message using __toast.success__.
+
+Implement Loading State: Showing a loading state when the signup or login process is in progress. Disabled the signup/login button during this time to prevent multiple clicks.
