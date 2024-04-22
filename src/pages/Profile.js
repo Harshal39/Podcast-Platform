@@ -5,6 +5,7 @@ import Header from '../components/CommonComponents/Header';
 function Profile() {
     const user = useSelector((state) => state.user.user);
     console.log("My user",user);
+    
   return (
     <div>
       <Header />

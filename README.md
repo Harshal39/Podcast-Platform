@@ -93,3 +93,17 @@ Implemented Form Validations: Performed checks on the signup form and the login 
 Show Success Messages: Upon successful user creation or login, show a success message using __toast.success__.
 
 Implement Loading State: Showing a loading state when the signup or login process is in progress. Disabled the signup/login button during this time to prevent multiple clicks.
+
+
+## Fetching User Object
+Here we focus on user authentication state management.\
+Goal is to ensure that the user state persists across different pages of the application and even after refreshing the page.\
+The two key steps to achieve this are:-
+1. Create a __useEffect hook__ to fetch the user state and save it in Redux.
+2. Establish __private routes__ to ensure only authenticated users access certain parts of the app.
+
+   
+### Process:-
+1. Create a __useEffect hook__: The hook will fetch the user state using the __onAuthStateChanged__  method from Firebase. Once fetched, the state is saved in Redux. This hook ensures that the user state is available on every page of the application.
+2. Use the __onSnapshot function__: This function triggers whenever something changes in our document. It fetches the document of the current user from the database. If the document exists, it gets all the user data and stores it.
+3. Implement __User State Check__: To avoid errors due to the asynchronous nature of fetching user state, implement a loading state. This way, certain parts of the app will only render when the user state is available.
