@@ -117,3 +117,13 @@ To install dependencies:-\
 CMD:- ```npm i react-firebase-hooks```\
 More information:- ```https://www.npmjs.com/package/react-firebase-hooks```
 
+
+## Create a Podcast Page
+This feature is integral to our podcast platform as it allows users to add new podcasts to the platform.\
+We used the React framework, specifically the React Router and the useState and useEffect hooks, to manage the application's state and route between different pages.
+
+### Process:-
+1. Set up the __'Create a Podcast'__ route: We began by setting up a new route in our router file. This route leads to a 'Create a Podcast' page that contains a form for users to input details about their podcast.
+2. Built the 'Create a Podcast' form: We created a form with fields for the podcast's title, description, and images. For image uploads, we created a custom file input component, which improves the user interface (UI) experience by providing a custom styled file picker.
+3. Handle form submission: We created a function to handle form submissions. Upon submission, the form data is collected, validated, and ready to be sent to a server for processing.
+4. Implement authentication: We ensured that only authenticated users can access the 'Create a Podcast' page. This is important to track who created a podcast and maintain the security of our platform.

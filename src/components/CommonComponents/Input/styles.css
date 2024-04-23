@@ -18,3 +18,11 @@ custom-input:focus{
 .custom-input placeholder{
     color: var(--purple-gray);
 }
+
+.label-input{
+    color: var(--purple-gray);
+}
+
+.active{
+    border-color:var(--white);
+}

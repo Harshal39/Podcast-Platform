@@ -16,8 +16,8 @@ function Header() {
         <Link to="/podcasts" 
         className={currentPath === "/podcast" ? "active" : ""}>Podcasts</Link>
 
-        <Link to="/start-a-podcast" 
-        className={currentPath === "/start-a-project" ? "active" : ""}>Start A Podcast</Link>
+        <Link to="/create-a-podcast" 
+        className={currentPath === "/create-a-project" ? "active" : ""}>Start A Podcast</Link>
 
         <Link to="/profile" 
         className={currentPath === "/profile" ? "active" : ""}>Profile</Link>
