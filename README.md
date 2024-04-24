@@ -144,7 +144,7 @@ We used the React framework, specifically the React Router and the useState and 
 
 ## Podcast Page
 Fetching all of our podcasts and storing them in Redux, so they are readily available for future page visits.
-1. Created a new slice in Redux: Just like we previously created a user slice, we created a new slice called the podcast slice. This slice includes reducers and actions to manage the podcast data in our Redux store.
+1. Created a new slice in Redux: Just like we previously created a user slice, we created a new slice called the __podcast slice__. This slice includes reducers and actions to manage the podcast data in our __Redux store__.
 2. Implemented the podcast slice in the Redux store: After creating the podcast slice, we implemented it in our Redux store. This way, we can use the slice to store and manage podcast data.
 3. Fetched all podcasts: We fetched all of our podcasts from the database. To accomplish this, we used the Firebase __onSnapshot method__, which provides real-time updates of our data.
 4. Stored podcasts in Redux: After fetching the podcasts, we stored them in our Redux store. This way, we will be able to access the podcasts across our application without having to fetch them from the database each time.
