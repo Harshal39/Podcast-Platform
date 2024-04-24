@@ -5,6 +5,9 @@ import InputComponent from '../CommonComponents/Input';
 import { toast } from 'react-toastify';
 import Button from '../CommonComponents/Button';
 import FileInput from '../CommonComponents/Input/FileInput';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { storage, auth, db } from '../../firebase';
+import { addDoc, collection } from 'firebase/firestore';
 
 function CreatePodcastForm() {
     const [title, setTitle] = useState("");
@@ -15,10 +18,50 @@ function CreatePodcastForm() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const handleSubmit = () => {
-        toast.success("Handling Form");
+    const handleSubmit = async () => {
+        //toast.success("Handling Form");
         if(title && desc && displayImage && bannerImage){
+            setLoading(true);
            //1. Upload files --> get downloadable links
+           try{
+            const bannerImageRef = ref(
+                storage,
+                `podcasts/${auth.currentUser.uid}/${Date.now()}`
+               );
+               await uploadBytes(bannerImageRef, bannerImage);
+    
+               const bannerImageUrl = await getDownloadURL(bannerImageRef);
+
+               const displayImageRef = ref(
+                storage,
+                `podcasts/${auth.currentUser.uid}/${Date.now()}`
+               );
+               await uploadBytes(displayImageRef, displayImage);
+    
+               const displayImageUrl = await getDownloadURL(displayImageRef);
+
+               const podcastData =  {
+                title:title,
+                description:desc,
+                bannerImage:bannerImageUrl,
+                displayImage:displayImageUrl,
+                createdBy:auth.currentUser.uid,
+              };
+
+              const docRef = await addDoc(collection(db,"podcasts"), podcastData);
+              setTitle("");
+              setDesc("");
+              setbannerImage(null);
+              setDisplayImage(null);
+              toast.success("Podcast Created");
+              setLoading(false);
+           }
+           catch(e){
+            toast.error(e.message);
+            console.log(e);
+            setLoading(false);
+           }
+           
            //2. create a new doc in new collection called podcasts
            //3. Save this new podcast episodes states in our podcasts
         }

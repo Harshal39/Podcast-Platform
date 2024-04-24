@@ -127,3 +127,15 @@ We used the React framework, specifically the React Router and the useState and 
 2. Built the 'Create a Podcast' form: We created a form with fields for the podcast's title, description, and images. For image uploads, we created a custom file input component, which improves the user interface (UI) experience by providing a custom styled file picker.
 3. Handle form submission: We created a function to handle form submissions. Upon submission, the form data is collected, validated, and ready to be sent to a server for processing.
 4. Implement authentication: We ensured that only authenticated users can access the 'Create a Podcast' page. This is important to track who created a podcast and maintain the security of our platform.
+
+
+
+## Uploading Podcast Page Files on Firebase
+ The primary focus is the construction of a 'Create a Podcast' page, an essential feature enabling users to upload new podcasts and their corresponding banner and display images.\
+ Firebase's storage service is employed to manage the file uploads and generate accessible, downloadable URLs for future use.
+
+### Process
+1. Started by preparing for file upload: Import required Firebase services (storage and database) and initialize the image references.
+2. Created a function to manage the file uploads to Firebase Storage. This function should take the file from the form input, generate a unique storage reference based on user's ID and current date, and upload the file using the __uploadBytes function__.
+3. Once the file is uploaded, retrieve the download URL using Firebase's __getDownloadURL function__. This URL can be used for downloading the file at a later stage.
+4. Store the podcast's data, including title, description, and file URLs, in the Firebase Database by creating a new document in the 'Podcasts' collection and setting its data to the podcast's information.
