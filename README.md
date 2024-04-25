@@ -149,3 +149,18 @@ Fetching all of our podcasts and storing them in Redux, so they are readily avai
 3. Fetched all podcasts: We fetched all of our podcasts from the database. To accomplish this, we used the Firebase __onSnapshot method__, which provides real-time updates of our data.
 4. Stored podcasts in Redux: After fetching the podcasts, we stored them in our Redux store. This way, we will be able to access the podcasts across our application without having to fetch them from the database each time.
 5. Displayed podcasts on the podcast page: Lastly, we created a podcast page that will display all of our podcasts. If no podcasts are found, the page will display a message indicating that no podcasts are currently available.
+
+
+
+## Podcast Details Page
+We have created a podcast details page that fetches podcast details and episodes from Firebase.\
+Fetched the specific podcast details using __React's useEffect__ and handled potential errors.\
+Styled the page for a better user interface, including aligning text, adding banner images, and adjusting color schemes.
+
+### Process
+1. __Created the Podcast Details Page__: A new page called __podcast details.js__ is created for displaying individual podcast details.
+2. __Add the Page to the Router__: The newly created page is added to the router to make it accessible.
+3. __Fetch Podcast Details__: Using __React's use Effect__ and the podcast's unique ID, the specific podcast details are fetched from Firebase.
+4. __Create a use State for the Podcast__: A use State is created to store the podcast details fetched from the database.
+5. __Display the Podcast Details__: The fetched podcast details are displayed on the page, including the title and the description.
+6. __Styling the Page__: The page is styled for a better user interface using CSS.
