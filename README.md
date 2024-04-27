@@ -164,3 +164,7 @@ Styled the page for a better user interface, including aligning text, adding ban
 4. __Create a use State for the Podcast__: A use State is created to store the podcast details fetched from the database.
 5. __Display the Podcast Details__: The fetched podcast details are displayed on the page, including the title and the description.
 6. __Styling the Page__: The page is styled for a better user interface using CSS.
+
+### Due to local system issues _React_ folder was deleted so here I have used Git to restore the code
+I have used ```git clone <repository address>``` command and code saved in github was cloned in local system thus saving a lot of time.\
+Resumed the project without any hastle just needed was to install previously installed dependecies again thanks to my documentation habit it was also easy to reinstall all the dependencies.
