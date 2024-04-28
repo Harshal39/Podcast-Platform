@@ -168,3 +168,18 @@ Styled the page for a better user interface, including aligning text, adding ban
 ### Due to local system issues _React_ folder was deleted so here I have used Git to restore the code
 I have used ```git clone <repository address>``` command and code saved in github was cloned in local system thus saving a lot of time.\
 Resumed the project without any hastle just needed was to install previously installed dependecies again thanks to my documentation habit it was also easy to reinstall all the dependencies.
+
+
+
+## Create An Episode
+Created an 'episode page' for a podcast application, where users can add new episodes to an existing podcast.\
+The process involves creating a new page, designing a form for users to fill out, and implementing the logic to handle user input and interaction.\
+Here, we're using JavaScript, along with libraries like React, and a Firebase database to store our data.
+
+### Process
+1. Created a new page: Begin by creating a new JavaScript file for the 'Create an Episode' page. This page should include a form for users to input details about the new episode.
+2. Worked on the router: Update your router to include a route to your new page.
+3. Implemented the form: The form should include fields for the title, description, and an audio file for the episode. Use the useState React Hook to manage the input states.
+4. Handle form submission: Upon form submission, validate the user input and handle any errors. If all fields are filled correctly, upload the audio file to your Firebase storage and create a new document in the episodes collection of your Firebase database.
+5. Fetched and displayed episodes: Finally, in the podcast details page, fetch the episodes data from the Firebase database and display it.
+
