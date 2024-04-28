@@ -84,7 +84,7 @@ function CreateAnEpisodePage() {
            <FileInput
               text="Upload Audio"
               accept={"audio/*"}
-              fileHandle={audioFileHandle}
+              fileHandleFnc={audioFileHandle}
               id={"audio-file-input"}
            />
            <Button

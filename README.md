@@ -183,3 +183,21 @@ Here, we're using JavaScript, along with libraries like React, and a Firebase da
 4. Handle form submission: Upon form submission, validate the user input and handle any errors. If all fields are filled correctly, upload the audio file to your Firebase storage and create a new document in the episodes collection of your Firebase database.
 5. Fetched and displayed episodes: Finally, in the podcast details page, fetch the episodes data from the Firebase database and display it.
 
+
+
+## Creating Custom Audio Player
+Build an audio player with functionality such as a play button, volume control, and track duration display.\
+React's useRef hook to directly manipulate certain element.\
+
+### Process 
+1. Created a new folder for audio player component and added an index.js file and a styles.css file within it.
+2. In the index.js file, written a basic functional component for audio player and import the styles.css file.
+3. Added a state to keep track of the currently playing file. This will help determine when to show the audio player.
+4. Imported audio player into the Podcast Details page and added it conditionally. This means the audio player will only be shown if there is a file currently playing.
+5. Passed the necessary props to the audio player. These may include the audio file source and podcast image.
+6. Style the audio player using CSS. Make sure it is fixed to the bottom of the page and add a translucent background.
+7. Added the image and the audio file to audio player. Used the useRef hook in React to create a reference for the audio file.
+
+   ### Note:- React Icons are used in making custom audio player.
+   To install react icons :- ```npm i react-icons```\
+   More information :- ```https://www.npmjs.com/package/react-icons```
