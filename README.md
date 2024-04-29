@@ -197,6 +197,11 @@ React's useRef hook to directly manipulate certain element.\
 5. Passed the necessary props to the audio player. These may include the audio file source and podcast image.
 6. Style the audio player using CSS. Make sure it is fixed to the bottom of the page and add a translucent background.
 7. Added the image and the audio file to audio player. Used the useRef hook in React to create a reference for the audio file.
+8. Created functions to handle play, pause, mute, volume adjustment, and duration changes.
+9. Linked the functions to the audio source by using a reference to the audio object (audioRef).
+10. Used useEffect to manage the audio player's behavior depending on its state.
+11. Added event listeners for time updates, loaded metadata, and ended events to control the audio player's behavior during playback.
+12. Implemented a time formatting function to display the current time and remaining time in a user-friendly format.
 
    ### Note:- React Icons are used in making custom audio player.
    To install react icons :- ```npm i react-icons```\
