@@ -211,4 +211,4 @@ React's useRef hook to directly manipulate certain element.\
 ## Profile Page
 Made an interactive profile page displaying information of the user.
 
-### Hosting the App in Netlify
+### Hosting the App in Vercel
