@@ -206,3 +206,9 @@ React's useRef hook to directly manipulate certain element.\
    ### Note:- React Icons are used in making custom audio player.
    To install react icons :- ```npm i react-icons```\
    More information :- ```https://www.npmjs.com/package/react-icons```
+
+
+## Profile Page
+Made an interactive profile page displaying information of the user.
+
+### Hosting the App in Netlify

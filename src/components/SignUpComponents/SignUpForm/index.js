@@ -8,6 +8,7 @@ import { setDoc, doc } from 'firebase/firestore';
 import { setUser } from "../../../slices/userSlice";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import FileInput from '../../CommonComponents/Input/FileInput';
 
 function SignUpForm() {
 
@@ -22,7 +23,7 @@ function SignUpForm() {
     const handleSignup = async ()=>{
       console.log("Handling Signup...");
       setLoading(true);
-      if(password===confirmpassword && password.length>=6 && fullName && email){
+      if(password==confirmpassword && password.length>=6 && fullName && email){
         try {
           //Creating User's Account
           const userCredential = await createUserWithEmailAndPassword(
@@ -60,7 +61,7 @@ function SignUpForm() {
           setLoading(false);
         }
       }else{
-        if(password!== confirmpassword){
+        if(password!= confirmpassword){
           toast.error("Please make sure your password and confirm password matches!")
         }
         else if(password.length < 6){
