@@ -56,3 +56,94 @@
     align-items: center;
     cursor: pointer;
 }
+
+/* For Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .custom-audio-player {
+    gap: 1.5rem;
+    padding: 0.8rem 0;
+  }
+  
+  .duration-div,
+  .volume-div {
+    gap: 1rem;
+  }
+  
+  .duration-flex {
+    gap: 1.5rem;
+  }
+  
+  .display-image-player {
+    height: 45px;
+  }
+}
+
+/* For Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .custom-audio-player {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.8rem 0;
+  }
+  
+  .duration-div {
+    width: 90%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .volume-div {
+    width: 90%;
+    justify-content: center;
+  }
+  
+  .duration-flex {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .display-image-player {
+    height: 40px;
+  }
+}
+
+/* For Mobile (480px and below) */
+@media (max-width: 480px) {
+  .custom-audio-player {
+    padding: 0.6rem 0;
+    gap: 0.5rem;
+  }
+  
+  .duration-div,
+  .volume-div {
+    width: 95%;
+    gap: 0.3rem;
+  }
+  
+  .duration-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .display-image-player {
+    height: 35px;
+  }
+  
+  .icons svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* For Very Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  .display-image-player {
+    height: 30px;
+  }
+  
+  .icons svg {
+    width: 18px;
+    height: 18px;
+  }
+}

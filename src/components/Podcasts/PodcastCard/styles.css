@@ -28,3 +28,66 @@
     text-decoration:none !important;
     margin: 0.5rem  0rem;
 }
+
+/* For Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .podcast-card {
+    width: 220px;
+    min-height: 220px;
+  }
+  
+  .display-image-podcast {
+    height: 190px;
+  }
+}
+
+/* For Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .podcast-card {
+    width: 200px;
+    min-height: 200px;
+  }
+  
+  .display-image-podcast {
+    height: 170px;
+  }
+}
+
+/* For Large Mobile (600px and below) */
+@media (max-width: 600px) {
+  .podcast-card {
+    width: 160px;
+    min-height: 180px;
+    padding: 0.4rem;
+  }
+  
+  .display-image-podcast {
+    height: 140px;
+  }
+}
+
+/* For Mobile (480px and below) */
+@media (max-width: 480px) {
+  .podcast-card {
+    width: 140px;
+    min-height: 160px;
+    border-radius: 0.8rem;
+  }
+  
+  .display-image-podcast {
+    height: 120px;
+    border-radius: 0.6rem;
+  }
+}
+
+/* For Very Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  .podcast-card {
+    width: 130px;
+    min-height: 150px;
+  }
+  
+  .display-image-podcast {
+    height: 110px;
+  }
+}

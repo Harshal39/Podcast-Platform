@@ -26,3 +26,31 @@ custom-input:focus{
 .active{
     border-color:var(--white);
 }
+
+/* For Tablets (768px and below) */
+@media (max-width: 768px) {
+  .custom-input {
+    width: 80vw;
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* For Mobile (576px and below) */
+@media (max-width: 576px) {
+  .custom-input {
+    width: 90vw;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    margin: 0.8rem;
+  }
+}
+
+/* For Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .custom-input {
+    width: 95vw;
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+}

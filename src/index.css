@@ -78,3 +78,98 @@ a{
   width:100%;
 }
 
+/* For Large Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .input-wrapper {
+    width: 90vw;
+  }
+  
+  .banner-wrapper,
+  .banner-wrapper img {
+    height: 280px;
+  }
+}
+
+/* For Tablets (768px and below) */
+@media (max-width: 768px) {
+  .input-wrapper {
+    width: 95vw;
+  }
+  
+  .input-wrapper h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .podcast-flex {
+    gap: 1rem;
+  }
+  
+  .banner-wrapper,
+  .banner-wrapper img {
+    height: 250px;
+  }
+}
+
+/* For Large Mobile (600px and below) */
+@media (max-width: 600px) {
+  .input-wrapper h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner-wrapper,
+  .banner-wrapper img {
+    height: 200px;
+  }
+  
+  .podcast-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* For Mobile (480px and below) */
+@media (max-width: 480px) {
+  .input-wrapper {
+    width: 100vw;
+    padding: 0 0.5rem;
+  }
+  
+  .input-wrapper h1 {
+    font-size: 1.1rem;
+  }
+  
+  .podcast-flex {
+    gap: 0.8rem;
+  }
+  
+  .banner-wrapper,
+  .banner-wrapper img {
+    height: 180px;
+    border-radius: 0.8rem;
+  }
+}
+
+/* For Very Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  .input-wrapper h1 {
+    font-size: 1rem;
+  }
+  
+  .banner-wrapper,
+  .banner-wrapper img {
+    height: 150px;
+  }
+  
+  .podcast-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* Special Cases */
+@media (max-width: 768px) and (orientation: landscape) {
+  .banner-wrapper,
+  .banner-wrapper img {
+    height: 200px;
+  }
+}
